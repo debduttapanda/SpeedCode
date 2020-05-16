@@ -22,7 +22,6 @@ public class BaseActivity extends AppCompatActivity {
     /**last modified = 06:05:2020 12:32**/
     public Integer abstractActivity = 1;
     protected Intent intent = null;
-    protected Appy appy = null;
     LoaderView lav = null;
     protected boolean busy = false;
     //////////////////////////////////
@@ -98,15 +97,10 @@ public class BaseActivity extends AppCompatActivity {
         Tyfo.overrideFont(this, "SERIF", font);
         Tyfo.overrideFont(this, "SANS_SERIF", font);
     }
-
-    private void initializeManagers() {
-        appy = new Appy(this);
-    }
     ////////////////////////////
 
     private void initialize() {
         setTypeFace();
-        initializeManagers();
     }
 
     protected BaseSharp getSharp() {
@@ -166,7 +160,7 @@ public class BaseActivity extends AppCompatActivity {
         if (Math.abs(sec) > 4) {
             PandaToast.showInformation(this, "Press back again to exit.", Toast.LENGTH_SHORT);
         } else {
-            appy.exit();
+            Appy.with(this).exit();
         }
     }
 
