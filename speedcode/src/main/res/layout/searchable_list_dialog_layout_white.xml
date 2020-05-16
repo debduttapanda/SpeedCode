@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_dialog_background"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/iv_ok"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/lav_search"
+        android:layout_alignBottom="@id/lav_search"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/lav_search"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_green_tick" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@id/iv_search"
+        android:layout_alignTop="@id/iv_search"
+        android:layout_alignRight="@id/iv_search"
+        android:layout_centerInParent="true"
+        app:lottie_rawRes="@raw/search_black2"></com.airbnb.lottie.LottieAnimationView>
+
+    <FrameLayout
+        android:id="@+id/fr_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_head"
+        android:visibility="gone">
+
+        <AutoCompleteTextView
+            android:id="@+id/at_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/language_selection_border_back"
+            android:completionThreshold="1"
+            android:ems="10"
+            android:hint="Start typing..."
+            android:inputType="textPersonName"
+            android:padding="7dp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="5dp"
+            app:srcCompat="@drawable/ic_close" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/v_divider"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_search_black_24dp" />
+
+    <TextView
+        android:id="@+id/tv_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Title"
+        android:textColor="@color/app_mid_dark_gray"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/v_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/fr_search"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#686868" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_values"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/v_divider" />
+
+
+</RelativeLayout>
