@@ -9,7 +9,7 @@ import android.util.Log;
 
 public class Appy {
     private Context context;
-    private Class splashActivity = null;
+    private static Class splashActivity = null;
 
     public Class getSplashActivity() {
         return splashActivity;
@@ -19,8 +19,13 @@ public class Appy {
         this.splashActivity = splashActivity;
     }
 
-    public Appy(Context context) {
+    private Appy(Context context) {
         this.context = context;
+    }
+
+    public static Appy with(Context context)
+    {
+        return new Appy(context);
     }
 
     public int getVersion()
