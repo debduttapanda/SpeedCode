@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.util.Log;
 
 public class MyExceptionHandler implements Thread.UncaughtExceptionHandler {
-    protected Class afterCrashStartActiviry = null;
+    protected static Class afterCrashStartActiviry = null;
     private Context context;
     private Activity activity;
     int intentFlag=Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -19,12 +19,12 @@ public class MyExceptionHandler implements Thread.UncaughtExceptionHandler {
         activity = a;
     }
 
-    public Class getAfterCrashStartActiviry() {
+    public static Class getAfterCrashStartActiviry() {
         return afterCrashStartActiviry;
     }
 
-    public void setAfterCrashStartActiviry(Class afterCrashStartActiviry) {
-        this.afterCrashStartActiviry = afterCrashStartActiviry;
+    public static void setAfterCrashStartActiviry(Class afterCrashStartActiviry) {
+        afterCrashStartActiviry = afterCrashStartActiviry;
     }
 
     @Override
