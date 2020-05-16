@@ -21,15 +21,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class BaseWebs {
     protected static String BASE_URL = "";
-    private static Retrofit retrofit = null;
-    private Context context;
+    protected static Retrofit retrofit = null;
+    protected Context context;
 
     public BaseWebs(Context context) {
         this.context = context;
     }
 
 
-    private static Retrofit getAltClient() {
+    protected static Retrofit getAltClient() {
 
         OkHttpClient okHttpClient = new OkHttpClient().newBuilder()
                 .connectTimeout(60, TimeUnit.SECONDS)
@@ -66,7 +66,7 @@ public class BaseWebs {
         void onEnd(String situation, Throwable t, T value);
     }
 
-    private <T> void fetch(Call<T> call, final OnFetchEvent onFetchEvent) {
+    protected <T> void fetch(Call<T> call, final OnFetchEvent onFetchEvent) {
 
         Log.d("fetch_api", call.toString());
         if (onFetchEvent == null) {
@@ -103,7 +103,7 @@ public class BaseWebs {
         });
     }
 
-    private void fetchd(Call<ResponseBody> call, final OnFetchEvent onFetchEvent) {
+    protected void fetchd(Call<ResponseBody> call, final OnFetchEvent onFetchEvent) {
 
         Log.d("fetch_api", call.toString());
         if (onFetchEvent == null) {
