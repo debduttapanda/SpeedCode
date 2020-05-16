@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/l_loader"
+        android:id="@+id/lottie_view"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"

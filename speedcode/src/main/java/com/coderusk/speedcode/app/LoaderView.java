@@ -89,7 +89,7 @@ public class LoaderView extends RelativeLayout {
 
     private void initialize()
     {
-        lav = findViewById(R.id.l_loader);
+        lav = findViewById(R.id.lottie_view);
     }
 
     /**
