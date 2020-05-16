@@ -62,7 +62,7 @@ public class Appy {
         ConfirmationDialog dialog = new ConfirmationDialog(context, "Logout", "Are you sure to logout?", new ConfirmationDialog.OnActionListener() {
             @Override
             public void onOk() {
-                Sharp sharp = new Sharp(context);
+                BaseSharp sharp = new BaseSharp(context);
                 sharp.clear();
                 Navi navi = new Navi(context);
                 navi.target(splashActivity).go();

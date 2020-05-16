@@ -110,8 +110,8 @@ public class BaseActivity extends AppCompatActivity {
         initializeManagers();
     }
 
-    protected Sharp getSharp() {
-        Sharp smp = new Sharp(this);
+    protected BaseSharp getSharp() {
+        BaseSharp smp = new BaseSharp(this);
         return smp;
     }
 
