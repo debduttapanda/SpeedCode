@@ -23,8 +23,8 @@ public class MyExceptionHandler implements Thread.UncaughtExceptionHandler {
         return afterCrashStartActiviry;
     }
 
-    public static void setAfterCrashStartActiviry(Class afterCrashStartActiviry) {
-        afterCrashStartActiviry = afterCrashStartActiviry;
+    public static void setAfterCrashStartActiviry(Class activiry) {
+        afterCrashStartActiviry = activiry;
     }
 
     @Override
