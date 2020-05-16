@@ -41,7 +41,7 @@ public class Appy {
         return versionCode;
     }
 
-    private void updateFromStore()
+    public void updateFromStore()
     {
         final String appPackageName = context.getPackageName();
         try {
