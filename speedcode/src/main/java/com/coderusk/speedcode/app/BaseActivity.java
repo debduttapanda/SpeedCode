@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.coderusk.speedcode.R;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
@@ -115,9 +114,9 @@ public class BaseActivity extends AppCompatActivity {
         return smp;
     }
 
-    protected Webs getWeber()
+    protected BaseWebs getWeber()
     {
-        return new Webs(this);
+        return new BaseWebs(this);
     }
 
     protected Worker getWorkManager() {
