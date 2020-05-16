@@ -29,6 +29,10 @@ public class BaseActivity extends AppCompatActivity {
     //////////////////////////////////
     private long pressed = 0;
 
+    public int getLoader_id() {
+        return 0;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +79,16 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     public void setContentView(int layoutResID) {
         super.setContentView(layoutResID);
-        lav = findViewById(R.id.l_loader);
+        int id = getLoader_id();
+        if(id!=0)
+        {
+            lav = findViewById(id);
+        }
+        else
+        {
+            lav = null;
+        }
+
 
     }
 

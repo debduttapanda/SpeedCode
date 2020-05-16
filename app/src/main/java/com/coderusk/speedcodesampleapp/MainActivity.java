@@ -27,4 +27,9 @@ public class MainActivity extends BaseActivity {
             }
         }).show();
     }
+
+    @Override
+    public int getLoader_id() {
+        return R.id.l_loader;
+    }
 }
