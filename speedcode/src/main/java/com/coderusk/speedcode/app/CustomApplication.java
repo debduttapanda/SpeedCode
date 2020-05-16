@@ -14,8 +14,14 @@ public class CustomApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        setAppCrashRestartActivity();
         initApplication();
         dataBank = new DataBank();
+    }
+
+    public void setAppCrashRestartActivity()
+    {
+
     }
 
     private void initApplication()
