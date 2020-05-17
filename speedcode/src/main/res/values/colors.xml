@@ -26,4 +26,11 @@
     <color name="item_select_color">#FFEBEE</color>
     <color name="dark_primary_green">#438825</color>
     <color name="darker_primary_green">#2D6A12</color>
+
+
+    <color name="disable_gray">#919191</color>
+
+    <color name="pn_view_color">@color/colorPrimary</color>
+    <color name="pn_view_color_pressed">@color/colorPrimaryDark</color>
+    <color name="pn_view_color_disable">@color/disable_gray</color>
 </resources>
