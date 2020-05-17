@@ -18,7 +18,7 @@ public class Loger {
             int level = 3;
             StackTraceElement[] traces;
             traces = Thread.currentThread().getStackTrace();
-            String display = (msg+" near "  + traces[level] + " " );
+            String display = ("\n"+msg+" near "  + traces[level] + " " );
             Log.d(TAG,display);
         } catch (Exception e) {
             e.printStackTrace();
