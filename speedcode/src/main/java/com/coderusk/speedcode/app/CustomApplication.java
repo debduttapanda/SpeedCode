@@ -24,12 +24,20 @@ public class CustomApplication extends Application {
 
     }
 
+    protected boolean customExceptionHandlerEnabled()
+    {
+        return true;
+    }
+
     private void initApplication()
     {
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
             @Override
             public void onActivityCreated(Activity activity, Bundle bundle) {
-                Thread.setDefaultUncaughtExceptionHandler(new MyExceptionHandler(activity));
+                if(customExceptionHandlerEnabled())
+                {
+                    Thread.setDefaultUncaughtExceptionHandler(new MyExceptionHandler(activity));
+                }
             }
 
             @Override
