@@ -42,8 +42,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         intent = getIntent();
         initialize();
+        onSetContentView();
         onCreateActions();
     }
+
+    protected abstract void onSetContentView();
 
     @Override
     protected void onStart() {
