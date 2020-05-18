@@ -18,7 +18,7 @@ import com.google.gson.JsonSyntaxException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
     /**last modified = 06:05:2020 12:32**/
     public Integer abstractActivity = 1;
     protected Intent intent = null;
@@ -31,11 +31,32 @@ public class BaseActivity extends AppCompatActivity {
         return 0;
     }
 
+    protected abstract void onCreateTasks();
+    protected abstract void findViews();
+    protected abstract void setViewsData();
+    protected abstract void setViewActions();
+    protected abstract void onStartTasks();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         intent = getIntent();
         initialize();
+        onCreateActions();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        onStartTasks();
+    }
+
+    protected void onCreateActions()
+    {
+        findViews();
+        setViewsData();
+        setViewActions();
+        onCreateTasks();
     }
 
     public Navi navi()

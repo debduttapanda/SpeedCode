@@ -87,4 +87,34 @@ public class MainActivity extends BaseActivity {
     public int getLoader_id() {
         return R.id.l_loader;
     }
+
+    @Override
+    protected void onCreateActions() {
+
+    }
+
+    @Override
+    protected void onCreateTasks() {
+
+    }
+
+    @Override
+    protected void findViews() {
+
+    }
+
+    @Override
+    protected void setViewsData() {
+
+    }
+
+    @Override
+    protected void setViewActions() {
+
+    }
+
+    @Override
+    protected void onStartTasks() {
+
+    }
 }
