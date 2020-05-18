@@ -13,5 +13,5 @@
         android:visibility="visible"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/gloader" />
+        app:lottie_rawRes="@raw/full_loader" />
 </merge>
