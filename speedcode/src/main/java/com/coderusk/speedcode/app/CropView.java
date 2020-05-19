@@ -136,8 +136,22 @@ public class CropView extends RelativeLayout {
     private void setViewActions() {
         setOnClickListener(null);
         iv_crop_back.setOnClickListener(v -> setVisibility(GONE));
-        iv_clock.setOnClickListener(v -> mCropView.rotateImage(CropImageView.RotateDegrees.ROTATE_90D));
-        iv_anticlock.setOnClickListener(v -> mCropView.rotateImage(CropImageView.RotateDegrees.ROTATE_M90D));
+        iv_clock.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(bitmap!=null)
+                {
+                    mCropView.rotateImage(CropImageView.RotateDegrees.ROTATE_90D);
+                }
+            }
+        });
+        iv_anticlock.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(bitmap!=null)
+                mCropView.rotateImage(CropImageView.RotateDegrees.ROTATE_M90D);
+            }
+        });
         iv_done.setOnClickListener(v -> onDoneClick());
         //////////////////////////////
         defaultConfigure();
@@ -155,6 +169,7 @@ public class CropView extends RelativeLayout {
     }
 
     private void onDoneClick() {
+        if(bitmap==null){return;}
         ////////////////////////////////////////////////
         ((BaseActivity)(context)).startWait();
         mCropView.crop(null).execute(new CropCallback() {
