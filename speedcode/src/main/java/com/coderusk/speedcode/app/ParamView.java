@@ -9,8 +9,7 @@ import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.vxplore.bikrimart_partner.R;
-import com.vxplore.bikrimart_partner.model.normal.ParamData;
+import com.coderusk.speedcode.R;
 
 public class ParamView extends RelativeLayout {
     private static String STATE_SUPER_CLASS = "SuperClass";
