@@ -68,25 +68,45 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     public void startWait() {
-        busy = true;
-        lav.setVisibility(View.VISIBLE);
-        disable();
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                busy = true;
+                lav.setVisibility(View.VISIBLE);
+                disable();
+            }
+        });
     }
 
     public void stopWait() {
-        busy = false;
-        lav.setVisibility(View.GONE);
-        enable();
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                busy = false;
+                lav.setVisibility(View.GONE);
+                enable();
+            }
+        });
     }
 
     public void startNormalWait() {
-        busy = true;
-        lav.setVisibility(View.VISIBLE);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                busy = true;
+                lav.setVisibility(View.VISIBLE);
+            }
+        });
     }
 
     public void stopNormalWait() {
-        busy = false;
-        lav.setVisibility(View.GONE);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                busy = false;
+                lav.setVisibility(View.GONE);
+            }
+        });
     }
 
     protected void disable() {
