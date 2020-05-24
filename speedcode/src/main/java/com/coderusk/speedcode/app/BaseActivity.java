@@ -1,5 +1,6 @@
 package com.coderusk.speedcode.app;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,6 +25,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected Intent intent = null;
     LoaderView lav = null;
     protected boolean busy = false;
+    protected Context context = null;
+    protected Context appContext = null;
     //////////////////////////////////
     private long pressed = 0;
 
@@ -39,6 +42,8 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        context = this;
+        appContext = getApplicationContext();
         super.onCreate(savedInstanceState);
         intent = getIntent();
         initialize();
