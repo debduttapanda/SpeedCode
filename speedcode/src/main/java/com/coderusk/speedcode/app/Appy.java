@@ -83,7 +83,7 @@ public class Appy {
         dialog.show();
     }
 
-    private void shareApp() {
+    public void shareApp() {
         try {
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
