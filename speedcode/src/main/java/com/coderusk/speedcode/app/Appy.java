@@ -7,6 +7,8 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.util.Log;
 
+import com.coderusk.speedcode.BuildConfig;
+
 public class Appy {
     private Context context;
     private static Class splashActivity = null;
@@ -79,5 +81,19 @@ public class Appy {
             }
         });
         dialog.show();
+    }
+
+    private void shareApp() {
+        try {
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
+            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Bikrimart");
+            String shareMessage= "\nBikrimart is a nice Application.\nGrocery and more is just a click away.\n\n";
+            shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.LIBRARY_PACKAGE_NAME +"\n\n";
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+            context.startActivity(Intent.createChooser(shareIntent, "Share by:"));
+        } catch(Exception e) {
+            //e.toString();
+        }
     }
 }
