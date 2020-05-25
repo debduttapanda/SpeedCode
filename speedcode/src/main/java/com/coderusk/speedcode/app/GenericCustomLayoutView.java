@@ -91,8 +91,11 @@ public abstract class GenericCustomLayoutView extends RelativeLayout {
     private void initialize()
     {
         findViews();
+        setViewData();
         setViewActions();
     }
+
+    protected abstract void setViewData();
 
     protected abstract void setViewActions();
 
