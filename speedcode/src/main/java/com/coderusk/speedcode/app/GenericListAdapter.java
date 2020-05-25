@@ -7,9 +7,6 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.vxplore.bikrimart_partner.custom_view.GenericCustomLayoutView;
-import com.vxplore.bikrimart_partner.interfaces.OnEventListener;
-
 import java.util.ArrayList;
 
 public class GenericListAdapter extends RecyclerView.Adapter<GenericListAdapter.MyViewHolder> {

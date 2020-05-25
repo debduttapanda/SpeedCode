@@ -8,8 +8,6 @@ import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
 
-import com.vxplore.bikrimart_partner.interfaces.OnEventListener;
-
 public abstract class GenericCustomLayoutView extends RelativeLayout {
     private static String STATE_SUPER_CLASS = "SuperClass";
     Context context=null;

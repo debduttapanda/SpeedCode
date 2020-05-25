@@ -9,8 +9,6 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.vxplore.bikrimart_partner.interfaces.OnEventListener;
-
 import java.util.ArrayList;
 
 public abstract class GenericCustomRecyclerView extends RecyclerView {

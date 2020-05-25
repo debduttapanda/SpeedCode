@@ -2,8 +2,6 @@ package com.coderusk.speedcode.app;
 
 import android.content.Context;
 
-import com.vxplore.bikrimart_partner.interfaces.OnEventListener;
-
 public abstract class GenericDialog extends PandaDialog {
     protected OnEventListener listener = null;
     protected GenericDialog(Context context, String title, OnEventListener listener) {
